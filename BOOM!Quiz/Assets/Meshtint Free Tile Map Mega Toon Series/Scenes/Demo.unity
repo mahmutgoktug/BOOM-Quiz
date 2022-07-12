@@ -154,7 +154,7 @@ Transform:
   - {fileID: 4562073596210880}
   - {fileID: 4562074488495028}
   m_Father: {fileID: 627398623}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393531851
 GameObject:
@@ -489,9 +489,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4982127100737976}
   - {fileID: 377181080}
   - {fileID: 1756814050}
+  - {fileID: 4982127100737976}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -910,7 +910,7 @@ Transform:
   - {fileID: 1194236110}
   - {fileID: 2141168721}
   m_Father: {fileID: 627398623}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2141168720
 PrefabInstance:
@@ -1575,13 +1575,26 @@ GameObject:
   m_Component:
   - component: {fileID: 4911057138032342}
   - component: {fileID: 95448628289760514}
+  - component: {fileID: 1818860939401171}
   m_Layer: 0
-  m_Name: oyuncu
+  m_Name: Oyuncu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1818860939401171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818860939401170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a05271fe8e8e574da0c9c0a44b7ab4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1846604594299372
 GameObject:
   m_ObjectHideFlags: 0

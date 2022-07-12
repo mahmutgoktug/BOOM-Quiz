@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 177103344718922936}
   - component: {fileID: 170236126930643308}
   - component: {fileID: 209232956385270702}
+  - component: {fileID: -6537582324158972311}
   m_Layer: 0
   m_Name: secenekA
   m_TagString: Untagged
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: -0.49999997, z: -0.000000059604645}
+--- !u!114 &-6537582324158972311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146688482701989740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6b176b72d46034fad2f25b7eb43530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
