@@ -15,7 +15,13 @@ public class InputManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        Vector3 mousePos = this.transform.position;
-        Oyuncu.GetComponent<OyuncuHareketManager>().HareketEt(mousePos, 0.5f);
+        if (this.transform.position.z > Oyuncu.transform.position.z&&this.transform.position.z<Oyuncu.transform.position.z+2)
+        {
+            Vector3 mousePos = this.transform.position;
+            Oyuncu.GetComponent<OyuncuHareketManager>().HareketEt(mousePos, 0.5f);
+        }
+
+
+        
     }
 }

@@ -12,10 +12,14 @@ public class OyuncuHareketManager : MonoBehaviour
 
     Quaternion donusYonu;
 
-    private void Start()
+    Animator anim;
+
+
+    private void Awake()
     {
-        
+        anim = GetComponent<Animator>();
     }
+
 
     public void HareketEt(Vector3 hedefPos,float gecikmeZamani=0.25f)
     {
@@ -37,7 +41,9 @@ public class OyuncuHareketManager : MonoBehaviour
 
         transform.DORotateQuaternion(donusYonu, .2f);
 
-        yield return new WaitForSeconds(gecikmezamani);
+        anim.SetBool("hareketEtsinmi", true);
+
+        yield return new WaitForSeconds(0.2f);
 
         this.transform.DOMove(hedefPos, gecikmezamani);
 
@@ -45,6 +51,12 @@ public class OyuncuHareketManager : MonoBehaviour
         {
             yield return null;
         }
+        anim.SetBool("hareketEtsinmi", false);
+
+
+        donusYonu = Quaternion.LookRotation(Vector3.zero);
+        transform.DORotateQuaternion(donusYonu, .2f);
+
         this.transform.position = hedefPos;
 
 
