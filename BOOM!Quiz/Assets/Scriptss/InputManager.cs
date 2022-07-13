@@ -8,12 +8,16 @@ public class InputManager : MonoBehaviour
 
     GameManager gameManager;
 
+    SesManager sesManager;
+
     public string ad;
 
 
     private void Awake()
     {
         gameManager = Object.FindObjectOfType<GameManager>();
+        sesManager = Object.FindObjectOfType<SesManager>();
+
 
         Oyuncu = GameObject.Find("Oyuncu");
     }
@@ -32,7 +36,7 @@ public class InputManager : MonoBehaviour
             Oyuncu.GetComponent<OyuncuHareketManager>().HareketEt(mousePos, 0.5f);
             gameManager.SonucuKontrolEt(ad);
             gameManager.soruCevaplansinmi = false;
-        
+            sesManager.ButonSesiCikar();
         }
 
 

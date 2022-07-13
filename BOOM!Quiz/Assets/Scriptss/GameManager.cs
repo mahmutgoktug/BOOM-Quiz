@@ -32,10 +32,13 @@ public class GameManager : MonoBehaviour
 
     OyuncuHareketManager oyuncuHareketManager;
 
+    SesManager sesManager;
+
     int dogruAdet;
 
     private void Awake()
     {
+        sesManager = Object.FindObjectOfType<SesManager>();
         oyuncuHareketManager = Object.FindObjectOfType<OyuncuHareketManager>();
         soruManager = Object.FindObjectOfType<SoruManager>();
     }
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
     IEnumerator OyunuAcRoutine()
     {
         yield return new WaitForSeconds(.1f);
+        sesManager.BaslaSesiCikar();
+
         soruPaneli.GetComponent<RectTransform>().DOAnchorPosX(30,1f);
 
         yield return new WaitForSeconds(1.1f);
@@ -70,6 +75,7 @@ public class GameManager : MonoBehaviour
             //sonuc dogru ise yapilacak islemler
 
             dogruAdet++;
+            sesManager.DogruSesiCikar();
 
             if (dogruAdet >= 15)
             {
@@ -84,6 +90,7 @@ public class GameManager : MonoBehaviour
         else
         {
             //sonuc yanlis ise yapilacak islemler
+            sesManager.YanlisSesiCikar();
             YanlisIconuAktiflestir();
             StartCoroutine(OyuncuHataYaptiGeriGeldi());
         }
@@ -168,6 +175,8 @@ public class GameManager : MonoBehaviour
 
     void DogruSonucGoster()
     {
+        sesManager.BitisSesiCikar();
+
         soruPaneli.GetComponent<RectTransform>().DOAnchorPosX(-1100, 1f);
         dogruSonuc.GetComponent<CanvasGroup>().DOFade(1, .5f);
         dogruSonuc.GetComponent<RectTransform>().DOScale(1, .5f).SetEase(Ease.OutBack);
@@ -177,6 +186,8 @@ public class GameManager : MonoBehaviour
 
     void YanlisSonucGoster()
     {
+        sesManager.BitisSesiCikar();
+
         soruPaneli.GetComponent<RectTransform>().DOAnchorPosX(-1100, 1f);
         yanlisSonuc.GetComponent<CanvasGroup>().DOFade(1, .5f);
         yanlisSonuc.GetComponent<RectTransform>().DOScale(1, .5f).SetEase(Ease.OutBack);
