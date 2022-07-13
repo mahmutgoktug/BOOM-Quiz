@@ -63,5 +63,16 @@ public class OyuncuHareketManager : MonoBehaviour
         hareketlimi = false;
     }
 
+    public void OyuncuHataYapti()
+    {
+        anim.SetBool("hataYapti", true);
+    }
+
+    public void OyuncuGeriGelsin()
+    {
+        this.transform.position = Vector3.zero;
+        anim.SetBool("hataYapti", false);
+    }
+
 
 }

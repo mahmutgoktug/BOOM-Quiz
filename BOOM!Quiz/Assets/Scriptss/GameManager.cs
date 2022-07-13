@@ -11,20 +11,36 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject dogruIcon, yanlisIcon;
 
+    [SerializeField]
+    GameObject oyuncuPrefab;
+
+    [SerializeField]
+    GameObject robot_1, robot_2, robot_3;
+
     public bool soruCevaplansinmi;
 
     public string dogruCevap;
 
+
+    int kalanHak;
+
     SoruManager soruManager;
+
+
+    OyuncuHareketManager oyuncuHareketManager;
+
 
     private void Awake()
     {
+        oyuncuHareketManager = Object.FindObjectOfType<OyuncuHareketManager>();
         soruManager = Object.FindObjectOfType<SoruManager>();
     }
 
 
     private void Start()
     {
+        kalanHak = 3;
+
         StartCoroutine(OyunuAcRoutine());
     }
 
@@ -53,6 +69,7 @@ public class GameManager : MonoBehaviour
         {
             //sonuc yanlis ise yapilacak islemler
             YanlisIconuAktiflestir();
+            StartCoroutine(OyuncuHataYaptiGeriGeldi());
         }
     }
 
@@ -80,4 +97,58 @@ public class GameManager : MonoBehaviour
     {
         yanlisIcon.GetComponent<CanvasGroup>().DOFade(0, .3f);
     }
+
+    IEnumerator OyuncuHataYaptiGeriGeldi()
+    {
+        yield return new WaitForSeconds(1f);
+
+        oyuncuHareketManager.OyuncuHataYapti();
+
+        yield return new WaitForSeconds(1.4f);
+
+        kalanHak--;
+
+        HakKaybet();
+        if (kalanHak > 0)
+        {
+            oyuncuHareketManager.OyuncuGeriGelsin();
+
+            yield return new WaitForSeconds(1f);
+            soruManager.SorulariYazdir();
+        }
+        else
+        {
+            //oyun bitti
+            print("oyun bitti");
+        }
+
+        
+    }
+
+
+
+    void HakKaybet()
+    {
+        if (kalanHak == 2)
+        {
+            robot_3.SetActive(false);
+            robot_2.SetActive(true);
+            robot_1.SetActive(true);
+        }
+        else if(kalanHak==1)
+        {
+            robot_3.SetActive(false);
+            robot_2.SetActive(false);
+            robot_1.SetActive(true);
+        }
+        else if (kalanHak == 0)
+        {
+            robot_3.SetActive(false);
+            robot_2.SetActive(false);
+            robot_1.SetActive(false);
+        }
+    }
+
+
+
 }

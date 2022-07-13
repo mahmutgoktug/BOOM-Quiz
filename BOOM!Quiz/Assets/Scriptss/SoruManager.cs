@@ -46,7 +46,11 @@ public class SoruManager : MonoBehaviour
 
     public void SorulariYazdir()
     {
+        cevapAdet = 0;
+
         soruTxt.text = sorularList[kacinciSoru].soru;
+        
+
 
         soruTxt.GetComponent<CanvasGroup>().alpha = 0f;
         soruTxt.GetComponent<RectTransform>().localScale = Vector3.zero;
@@ -100,6 +104,8 @@ public class SoruManager : MonoBehaviour
 
             cevapAdet++;
         }
+
+        kacinciSoru++;
         gameManager.soruCevaplansinmi = true;
     }
 
