@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 63449936}
   - component: {fileID: 63449938}
   - component: {fileID: 63449937}
+  - component: {fileID: 63449939}
   m_Layer: 5
   m_Name: soruTxt
   m_TagString: Untagged
@@ -318,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.1662, y: -75.5571}
+  m_AnchoredPosition: {x: 3.1662, y: -61}
   m_SizeDelta: {x: 911.311, y: 125.9858}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &63449937
@@ -368,13 +369,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -418,6 +419,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63449935}
   m_CullTransparentMesh: 1
+--- !u!225 &63449939
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63449935}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &123691801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,13 +2977,100 @@ MonoBehaviour:
     - "Do\u011Fal uydu"
     - "Y\u0131ld\u0131z"
     - Meteor
-    dogruCevap: 
-  - soru: 
-    cevaplar: []
-    dogruCevap: 
-  - soru: 
-    cevaplar: []
-    dogruCevap: 
+    dogruCevap: A
+  - soru: "Ay, D\xFCnya \xE7evresindeki dolanma hareketini ne kadar s\xFCrede tamamlar
+      ?"
+    cevaplar:
+    - 24 saat
+    - "365 g\xFCn 6 saat"
+    - "27,3 g\xFCn"
+    dogruCevap: C
+  - soru: "Ay'\u0131n \xE7ap\u0131n\u0131n D\xFCnya'n\u0131n \xE7ap\u0131na oran\u0131
+      ka\xE7t\u0131r ?"
+    cevaplar:
+    - 1/2
+    - 1/4
+    - 1/8
+    dogruCevap: B
+  - soru: "Ay'\u0131n D\xFCnya'ya uzakl\u0131\u011F\u0131 ka\xE7 kilometredir ?"
+    cevaplar:
+    - 384.400 km
+    - 382.400 km
+    - 370.000 km
+    dogruCevap: A
+  - soru: "Ay ile ilgili a\u015Fa\u011F\u0131dakilerden hangisi <u> yanl\u0131\u015Ft\u0131r
+      ? <u>"
+    cevaplar:
+    - "Ay'a ilk ad\u0131m basan\u0131n ad\u0131 M\xFCsl\xFCm G\xFCrses'tir."
+    - "Ci\u011Ferci Muharrem baz\u0131 deneyler i\xE7in Ay'a \xE7\xF6p \u015Fi\u015F
+      g\xF6ndermi\u015Ftir."
+    - "Bir rivayete bu zamana kadar Ay'dan duyulabi\u015Fen tek sesin Emre S\xF6zen'in
+      ossuru\u011Fu olmu\u015Ftur."
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  - soru: "A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    cevaplar:
+    - "LGBT \xFCyeleri"
+    - "G\xFCzel k\u0131zlar"
+    - "Buz par\xE7alar\u0131"
+    dogruCevap: C
+  soruTxt: {fileID: 63449937}
+  cevapPrefab: {fileID: 6833899156067511065, guid: 1a77520d430b0104d81442223abcf96e, type: 3}
+  cevapContainer: {fileID: 1738761170}
+  dogruSecenek: 
 --- !u!1 &1581097422
 GameObject:
   m_ObjectHideFlags: 0

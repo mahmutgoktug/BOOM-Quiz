@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 2219446668358309862}
   m_Layer: 5
   m_Name: cevapPrefab
-  m_TagString: Untagged
+  m_TagString: cevapTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
