@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject robot_1, robot_2, robot_3;
 
+    [SerializeField]
+    GameObject dogruSonuc, yanlisSonuc;
+
     public bool soruCevaplansinmi;
 
     public string dogruCevap;
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     OyuncuHareketManager oyuncuHareketManager;
 
+    int dogruAdet;
 
     private void Awake()
     {
@@ -40,6 +44,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         kalanHak = 3;
+        dogruAdet = 0;
 
         StartCoroutine(OyunuAcRoutine());
     }
@@ -63,6 +68,17 @@ public class GameManager : MonoBehaviour
         if (gelenCevap == dogruCevap)
         {
             //sonuc dogru ise yapilacak islemler
+
+            dogruAdet++;
+
+            if (dogruAdet >= 15)
+            {
+                DogruSonucGoster();
+            }
+            else
+            {
+                soruManager.SorulariYazdir();
+            }
             DogruIconuAktiflestir();
         }
         else
@@ -119,7 +135,7 @@ public class GameManager : MonoBehaviour
         else
         {
             //oyun bitti
-            print("oyun bitti");
+            YanlisSonucGoster();
         }
 
         
@@ -150,5 +166,24 @@ public class GameManager : MonoBehaviour
     }
 
 
+    void DogruSonucGoster()
+    {
+        soruPaneli.GetComponent<RectTransform>().DOAnchorPosX(-1100, 1f);
+        dogruSonuc.GetComponent<CanvasGroup>().DOFade(1, .5f);
+        dogruSonuc.GetComponent<RectTransform>().DOScale(1, .5f).SetEase(Ease.OutBack);
+    }
 
+
+
+    void YanlisSonucGoster()
+    {
+        soruPaneli.GetComponent<RectTransform>().DOAnchorPosX(-1100, 1f);
+        yanlisSonuc.GetComponent<CanvasGroup>().DOFade(1, .5f);
+        yanlisSonuc.GetComponent<RectTransform>().DOScale(1, .5f).SetEase(Ease.OutBack);
+
+
+
+
+
+    }
 }
