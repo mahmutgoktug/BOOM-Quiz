@@ -1005,7 +1005,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8679245, g: 0.46684906, b: 0.093342766, a: 0}
+  m_BackGroundColor: {r: 0.19750796, g: 0.6886792, b: 0.56632787, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2879,6 +2879,7 @@ GameObject:
   - component: {fileID: 1565334187}
   - component: {fileID: 1565334189}
   - component: {fileID: 1565334188}
+  - component: {fileID: 1565334190}
   m_Layer: 5
   m_Name: sorularBackImg
   m_TagString: Untagged
@@ -2945,6 +2946,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565334186}
   m_CullTransparentMesh: 1
+--- !u!114 &1565334190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565334186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0586e9cad8df0f342833df7d20803c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sorularList:
+  - soru: "Bir gezegenin etraf\u0131nda dolanan g\xF6k cismine ne ad verilir ?"
+    cevaplar:
+    - "Do\u011Fal uydu"
+    - "Y\u0131ld\u0131z"
+    - Meteor
+    dogruCevap: 
+  - soru: 
+    cevaplar: []
+    dogruCevap: 
+  - soru: 
+    cevaplar: []
+    dogruCevap: 
 --- !u!1 &1581097422
 GameObject:
   m_ObjectHideFlags: 0
