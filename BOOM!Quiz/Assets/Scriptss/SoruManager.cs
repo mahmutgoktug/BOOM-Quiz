@@ -21,23 +21,30 @@ public class SoruManager : MonoBehaviour
     [SerializeField]
     Transform cevapContainer;
 
-    public string dogruSecenek;
+    
 
     int cevapAdet;
 
 
     int kacinciSoru;
 
-    string[] secenekler = { "A", "B", "C" }; 
+    string[] secenekler = { "A)", "B)", "C)" };
+
+    GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = Object.FindObjectOfType<GameManager>();
+    }
 
     private void Start()
     {
         sorularList = sorularList.OrderBy(i => Random.value).ToList();
-        SorulariYazdir();
+        //SorulariYazdir();
     }
 
 
-    void SorulariYazdir()
+    public void SorulariYazdir()
     {
         soruTxt.text = sorularList[kacinciSoru].soru;
 
@@ -70,7 +77,7 @@ public class SoruManager : MonoBehaviour
         }
 
 
-        dogruSecenek = sorularList[kacinciSoru].dogruCevap;
+        gameManager.dogruCevap = sorularList[kacinciSoru].dogruCevap;
 
         StartCoroutine(CevaplariAcRoutine());
     }
@@ -93,6 +100,7 @@ public class SoruManager : MonoBehaviour
 
             cevapAdet++;
         }
+        gameManager.soruCevaplansinmi = true;
     }
 
 }
