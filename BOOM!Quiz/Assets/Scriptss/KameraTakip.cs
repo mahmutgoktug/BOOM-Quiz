@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KameraTakip : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class KameraTakip : MonoBehaviour
     Transform hedef;
 
     Vector3 hedefUzaklik;
+
+
+    public void MenuDon()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 
     private void Start()

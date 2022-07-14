@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028514, g: 0.22571552, b: 0.3069246, a: 1}
+  m_IndirectSpecularColor: {r: 0.94965744, g: 0.23085779, b: 0.09409149, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 3267b25d27fefaf4d9202170f103405f, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: d09f6abfc48b6b5498c26bbb6d86dd3e, type: 2}
   m_LightingSettings: {fileID: 421892445}
 --- !u!196 &4
 NavMeshSettings:
@@ -2940,7 +2940,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.186021e+27, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3353,7 +3353,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1147162722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393531859}
+        m_TargetAssemblyTypeName: KameraTakip, Assembly-CSharp
+        m_MethodName: MenuDon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1147162722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3831,7 +3843,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "OYUNDAN\n\xC7IK"
+  m_text: 'MENUYE
+
+    DON'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e98124d360d1c419234c737ea06a76, type: 2}
   m_sharedMaterial: {fileID: -5835080749787630466, guid: 20e98124d360d1c419234c737ea06a76, type: 2}
@@ -4446,131 +4460,137 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorularList:
-  - soru: "Bir gezegenin etraf\u0131nda dolanan g\xF6k cismine ne ad verilir ?"
+  - soru: "Necla \xE7elikkaya'n\u0131n en \xE7ok istedi\u011Fi \u015Fey ne ?"
     cevaplar:
-    - "Do\u011Fal uydu"
-    - "Y\u0131ld\u0131z"
-    - Meteor
+    - Araba
+    - Eraba
+    - Meraba
     dogruCevap: A
-  - soru: "Ay, D\xFCnya \xE7evresindeki dolanma hareketini ne kadar s\xFCrede tamamlar
+  - soru: "Aliye S\xF6zen hayata bir kere daha gelse ne olarak gelmeyi tercih eder
       ?"
     cevaplar:
-    - 24 saat
-    - "365 g\xFCn 6 saat"
-    - "27,3 g\xFCn"
+    - "Alt\u0131 y\xFCksek araba"
+    - Bomba
+    - "Seri katil ama sap\u0131k olan"
     dogruCevap: C
-  - soru: "Ay'\u0131n \xE7ap\u0131n\u0131n D\xFCnya'n\u0131n \xE7ap\u0131na oran\u0131
-      ka\xE7t\u0131r ?"
+  - soru: "Necla \xC7elikkaya'n\u0131n en \xFCnl\xFC repli\u011Fi nedir ?"
     cevaplar:
-    - 1/2
-    - 1/4
-    - 1/8
+    - "Senin ad\u0131n neydi ?"
+    - Sen bilmiyon
+    - "G\xF6ktu\u011F ders \xE7al\u0131\u015F"
     dogruCevap: B
-  - soru: "Ay'\u0131n D\xFCnya'ya uzakl\u0131\u011F\u0131 ka\xE7 kilometredir ?"
+  - soru: "Uzayl\u0131lar hangi dili konu\u015Fmaktad\u0131r ?"
     cevaplar:
-    - 384.400 km
-    - 382.400 km
-    - 370.000 km
+    - "\u0130topyaca"
+    - Zazaca
+    - "Rus\xE7a"
+    dogruCevap: B
+  - soru: "Mahmut G\xF6ktu\u011F \u0131ss\u0131z bir adaya d\xFC\u015Ferse en \xE7ok
+      ihtiya\xE7 duyaca\u011F\u0131 \u015Fey ?"
+    cevaplar:
+    - "Kredi Kart\u0131"
+    - Molotof
+    - Dildo
+    dogruCevap: C
+  - soru: "Halil Ejder'in en sevdi\u011Fi film a\u015Fa\u011F\u0131dakilerden hangisidir
+      ?"
+    cevaplar:
+    - "D\xFCnya Sava\u015F\u0131 Z"
+    - Annakarinna 1
+    - Annakarinna 2
     dogruCevap: A
-  - soru: "Ay ile ilgili a\u015Fa\u011F\u0131dakilerden hangisi <u> yanl\u0131\u015Ft\u0131r
-      ? <u>"
+  - soru: "Halil Ejder'in kedisinin ad\u0131 nedir ?"
     cevaplar:
-    - "Ay'a ilk ad\u0131m basan\u0131n ad\u0131 M\xFCsl\xFCm G\xFCrses'tir."
-    - "Ci\u011Ferci Muharrem baz\u0131 deneyler i\xE7in Ay'a \xE7\xF6p \u015Fi\u015F
-      g\xF6ndermi\u015Ftir."
-    - "Bir rivayete bu zamana kadar Ay'dan duyulabi\u015Fen tek sesin Emre S\xF6zen'in
-      ossuru\u011Fu olmu\u015Ftur."
+    - Cookie
+    - Abdurrezzak
+    - Witcher
     dogruCevap: C
-  - soru: "1A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+  - soru: "Halil Ejder'in takma ad\u0131 nedir ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "2A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - DRAGOO
+    - "Y\xFCr\xFCyen t*\u015F\u015F*k"
+    - Pubciciamca
+    dogruCevap: B
+  - soru: "Halil Ejder'in en sevdi\u011Fi kad\u0131n tipi ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "3A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - Sahure
+    - "Her t\xFCrl\xFC Koreli kad\u0131n"
+    - "Tu\u011Fba"
+    dogruCevap: B
+  - soru: "Halil Ejder'in en sevdi\u011Fi yigeni kimdir ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "4A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - Ahmet
+    - Alperen
+    - Batuhan
+    dogruCevap: A
+  - soru: "Emre S\xF6zen'in ka\u015Flar\u0131 ka\xE7 <u> cm'dir  <u> ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "5A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - 18 inch
+    - 20 cm
+    - 0.2 cm
+    dogruCevap: A
+  - soru: "Alperen S\xF6zen'in ossuru\u011Fu en \xE7ok ka\xE7 desibel \xF6l\xE7\xFClm\xFC\u015Ft\xFCr
+      ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
+    - 31
+    - 80
+    - 142
     dogruCevap: C
-  - soru: "6A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+  - soru: "Alperen S\xF6zen ne tarz ortamlarda ossurmay\u0131 tercih eder ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "7A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - "Kalabal\u0131k ise asans\xF6rde"
+    - "Arkas\u0131 dolu ise"
+    - "\xD6ks\xFCr\xFCrken"
+    dogruCevap: B
+  - soru: "Alperen S\xF6zen hangi seviye yaz\u0131l\u0131mc\u0131d\u0131r ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "8A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - Cevap B
+    - Junior
+    - Cevap A
+    dogruCevap: B
+  - soru: "Alperen S\xF6zen en \xE7ok hangi hayvan\u0131 sever ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "9A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - "B\xFCt\xFCn kuzenlerini"
+    - "Bok B\xF6ce\u011Fi"
+    - "Hamam B\xF6ce\u011Fi"
+    dogruCevap: A
+  - soru: "Alperen S\xF6zen hangi kad\u0131nlardan ho\u015Flan\u0131r ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
+    - "B\u0131y\u0131kl\u0131"
+    - "\xDClk\xFCc\xFC"
+    - Japon
     dogruCevap: C
-  - soru: "10A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+  - soru: "Alperen S\xF6zen'in yaz\u0131l\u0131mc\u0131 olmasayd\u0131 yapaca\u011F\u0131
+      meslek ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
+    - "Polis \xD6zel Harekat"
+    - "\xD6zel Kuvvetler"
+    - "Binba\u015F\u0131 \xD6z\xE7elik"
     dogruCevap: C
-  - soru: "11A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+  - soru: "Mahmut G\xF6ktu\u011F nas\u0131l kad\u0131nlardan ho\u015Flan\u0131r ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "12A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - "LGBT \xFCyesi olmas\u0131"
+    - "Anas\u0131 g\xFCzel olmas\u0131"
+    - "Amerigali olmas\u0131"
+    dogruCevap: B
+  - soru: "Batuhan \xC7elikkaya'n\u0131n en sevdi\u011Fi yemek ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "13A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+    - "Her \u015Fey"
+    - Cevap A
+    - Cevap B
+    dogruCevap: A
+  - soru: "Ahmet \xC7elikkaya'n\u0131n hayalindeki meslek ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
+    - "Yaz\u0131l\u0131mc\u0131"
+    - "Ka\xE7ak\xE7\u0131"
+    - Pezevenk
     dogruCevap: C
-  - soru: "14A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
+  - soru: "Metehan S\xF6zen'in gelecekte\u011Fi mesle\u011Fi ?"
     cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
-  - soru: "15A\u015Fa\u011F\u0131dakilerden hangisi Ay y\xFCzeyinde bulunmaz ?"
-    cevaplar:
-    - "LGBT \xFCyeleri"
-    - "G\xFCzel k\u0131zlar"
-    - "Buz par\xE7alar\u0131"
-    dogruCevap: C
+    - "Nitelikli doland\u0131r\u0131c\u0131"
+    - "\u0130svi\xE7re'nin en \xF6nemli yaz\u0131l\u0131mc\u0131lar\u0131ndan olmak"
+    - "Rus\xE7a \xF6\u011Fretmeni"
+    dogruCevap: A
   soruTxt: {fileID: 63449937}
   cevapPrefab: {fileID: 6833899156067511065, guid: 1a77520d430b0104d81442223abcf96e, type: 3}
   cevapContainer: {fileID: 1738761170}
